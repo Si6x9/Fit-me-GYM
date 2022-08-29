@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Using plain html in pug</title> -->
+    
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/563/563828.png" type="image/png">
+    <title>#{title}</title>
+    <!-- To include style.css file -->
+    style
+        include ../static/styles.css
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
+            <li><a href="/">Services</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>This is GYM</h1>
+        <p>
+            | #{content}
+            <!-- This is a plain html using pug -->
+        </p>
+        <div>
+            <form action="/" method="post" id="contactform">
+                <input type="text" name="name" class="form" id="name" placeholder="Enter your name">
+                <input type="text" name="age" class="form" id="age" placeholder="Enter your age">
+                <input type="text" name="sex" class="form" id="gender" placeholder="Enter your sex">
+                <input type="text" name="mobile" class="form" id="mobile" placeholder="Enter your contact number">
+                <textarea name="more" class="form" id="more" cols="30" rows="10" placeholder="Tell us more about you"></textarea>
+                <button type="submit" id="submit"> Submit now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
